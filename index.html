@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Association of Emerging Professionals — Build leadership, meet inspiring people, and grow with AEP.">
+    <title>AEP | Association of Emerging Professionals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <img src="assets/aep-logo.jpeg" alt="AEP" class="preloader-logo-img">
+            </div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+            <p class="preloader-text">ASSOCIATION OF EMERGING PROFESSIONALS</p>
+        </div>
+    </div>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Geometric background canvas -->
+    <canvas id="geoCanvas" class="geo-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/aep-logo.jpeg" alt="AEP — Association of Emerging Professionals" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#join" class="nav-link nav-cta">Join AEP</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    Association of Emerging Professionals
+                </div>
+                <h1 class="hero-title reveal">
+                    <span class="dual-text" data-text="EMERGE">EMERGE</span>
+                    <span class="dual-text dual-text--gold" data-text="&amp; EXCEL">&amp; EXCEL</span>
+                </h1>
+                <p class="hero-subtitle reveal">LEAD · GROW · PIONEER</p>
+                <div class="hero-divider reveal" aria-hidden="true">
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond"></span>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="hero-desc reveal">
+                    Our aim is to build confident leaders, forge genuine connections, deliver projects that make a real difference, and give every member the space to step out and grow — <strong>that's what AEP stands for.</strong>
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="#join" class="btn btn-primary btn-magnetic">
+                        <span class="btn-bg"></span>
+                        <span class="btn-text">Join the Council</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#benefits" class="btn btn-outline btn-magnetic">
+                        <span class="btn-bg"></span>
+                        <span class="btn-text">Explore Benefits</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll reveal" aria-hidden="true">
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Who We Are</span>
+                    <h2 class="section-title dual-heading">
+                        <span>Fostering</span>
+                        <span class="gold">Professional Excellence</span>
+                    </h2>
+                    <div class="section-flourish" aria-hidden="true"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <div class="card-glow"></div>
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <p>We welcome students of all strengths: leadership, communication, event management, content creation, social media, design, outreach, sponsorships, public speaking, or even the behind-the-scenes magic that holds it all together.</p>
+                            <p class="highlight-text">There's a role here with your name on it.</p>
+                        </div>
+                    </div>
+                    <div class="about-card about-card--accent reveal">
+                        <div class="card-glow"></div>
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <div class="quote-mark" aria-hidden="true">"</div>
+                            <p>And if you're worried about experience? <em>Please don't be.</em> AEP is just as much about learning and growing as it is about contributing.</p>
+                            <p>What we truly value is your <strong>enthusiasm</strong>, your <strong>initiative</strong>, your <strong>fresh perspective</strong>, and your <strong>willingness to show up</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Benefits -->
+        <section class="section benefits" id="benefits">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">What You Get</span>
+                    <h2 class="section-title dual-heading">
+                        <span>Being Part of AEP</span>
+                        <span class="gold">Gets You</span>
+                    </h2>
+                    <div class="section-flourish" aria-hidden="true"></div>
+                </div>
+                <div class="benefits-grid">
+
+                    <article class="benefit-card reveal" data-tilt>
+                        <div class="benefit-icon">🏅</div>
+                        <div class="benefit-number">01</div>
+                        <h3 class="benefit-title">A Guaranteed Letter of Recommendation</h3>
+                        <p class="benefit-desc">Complete your term and walk away with a powerful LOR from Dr. Sartaj &amp; Dr. Darshita — a meaningful credential for job applications, internships, or graduate school.</p>
+                        <div class="benefit-glow"></div>
+                    </article>
+
+                    <article class="benefit-card reveal" data-tilt>
+                        <div class="benefit-icon">🎓</div>
+                        <div class="benefit-number">02</div>
+                        <h3 class="benefit-title">Personal Mentorship from Management Professors</h3>
+                        <p class="benefit-desc">Get real, one-on-one guidance from faculty who are genuinely invested in your personal and professional growth — not just your grades.</p>
+                        <div class="benefit-glow"></div>
+                    </article>
+
+                    <article class="benefit-card reveal" data-tilt>
+                        <div class="benefit-icon">🤝</div>
+                        <div class="benefit-number">03</div>
+                        <h3 class="benefit-title">Exclusive Access to Industry Professionals</h3>
+                        <p class="benefit-desc">As a council member, you'll learn directly from industry leaders through talks, sessions, and hands-on collaborations that go far beyond anything a lecture hall can offer.</p>
+                        <div class="benefit-glow"></div>
+                    </article>
+
+                    <article class="benefit-card reveal" data-tilt>
+                        <div class="benefit-icon">🚪</div>
+                        <div class="benefit-number">04</div>
+                        <h3 class="benefit-title">Connections That Open Real Doors</h3>
+                        <p class="benefit-desc">Build authentic relationships with professionals, entrepreneurs, and changemakers who can help shape — and accelerate — your career journey.</p>
+                        <div class="benefit-glow"></div>
+                    </article>
+
+                </div>
+
+                <!-- More benefits -->
+                <div class="more-benefits reveal">
+                    <div class="more-benefits-header">
+                        <span class="more-star">🌟</span>
+                        <h3>Member-Exclusive Benefits</h3>
+                    </div>
+                    <ul class="more-list">
+                        <li class="more-item reveal">
+                            <span class="more-bullet"></span>
+                            Certification &amp; Recognition (for participation &amp; volunteering)
+                        </li>
+                        <li class="more-item reveal">
+                            <span class="more-bullet"></span>
+                            Cross-disciplinary Learning
+                        </li>
+                        <li class="more-item reveal">
+                            <span class="more-bullet"></span>
+                            Developing leadership, communication, and networking skills
+                        </li>
+                        <li class="more-item reveal">
+                            <span class="more-bullet"></span>
+                            Gaining experience that sets you apart, on every résumé and in every room
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events -->
+        <section class="section events" id="events">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">What We Do</span>
+                    <h2 class="section-title dual-heading">
+                        <span>Our</span>
+                        <span class="gold">Events</span>
+                    </h2>
+                    <div class="section-flourish" aria-hidden="true"></div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="events-block events-block--upcoming reveal">
+                    <h3 class="events-subtitle events-subtitle--upcoming">
+                        <span class="events-subtitle-line"></span>
+                        Upcoming Events
+                        <span class="events-subtitle-line"></span>
+                    </h3>
+                    <div class="events-grid">
+                        <article class="event-card event-card--upcoming reveal" data-tilt>
+                            <div class="event-badge">September</div>
+                            <div class="event-media">
+                                <!-- TODO: replace with September event photo. Image path: assets/events/sept-1.jpg, alt text: September Event 1 -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                            </div>
+                            <h4 class="event-title">September Event 1</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                        <article class="event-card event-card--upcoming reveal" data-tilt>
+                            <div class="event-badge">September</div>
+                            <div class="event-media">
+                                <!-- TODO: replace with September event photo. Image path: assets/events/sept-2.jpg, alt text: September Event 2 -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                            </div>
+                            <h4 class="event-title">September Event 2</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                        <article class="event-card event-card--upcoming reveal" data-tilt>
+                            <div class="event-badge">September</div>
+                            <div class="event-media">
+                                <!-- TODO: replace with September event photo. Image path: assets/events/sept-3.jpg, alt text: September Event 3 -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                            </div>
+                            <h4 class="event-title">September Event 3</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Previous Events -->
+                <div class="events-block events-block--previous reveal">
+                    <h3 class="events-subtitle">
+                        <span class="events-subtitle-line"></span>
+                        Previous Events
+                        <span class="events-subtitle-line"></span>
+                    </h3>
+                    <div class="events-grid">
+                        <article class="event-card event-card--previous reveal" data-tilt>
+                            <button class="event-info-toggle" type="button" aria-expanded="false" aria-label="Toggle event description">
+                                <span aria-hidden="true">+</span>
+                            </button>
+                            <div class="event-media">
+                                <!-- Add image here. Image path: assets/events/recent-1.jpg, alt text: CV Masterclass - From Campus to Corporate -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                                <div class="event-overlay">
+                                    <p class="event-description">CV Masterclass - From Campus to Corporate was a hands-on career-readiness workshop built to help students bridge the gap between university and the professional world. The session covered what actually matters in today's job market; from crafting a resume that stands out, to decoding how corporate recruitment really works. Participants also walked through interview preparation techniques and strategies for adapting to a professional environment, leaving with practical, actionable tools for their next career move.</p>
+                                </div>
+                            </div>
+                            <h4 class="event-title">CV Masterclass - From Campus to Corporate</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                        <article class="event-card event-card--previous reveal" data-tilt>
+                            <button class="event-info-toggle" type="button" aria-expanded="false" aria-label="Toggle event description">
+                                <span aria-hidden="true">+</span>
+                            </button>
+                            <div class="event-media">
+                                <!-- Add image here. Image path: assets/events/recent-2.jpg, alt text: The Marketing Challenge -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                                <div class="event-overlay">
+                                    <p class="event-description">The Marketing Challenge 2026 brought theory to life, pushing students into live marketing scenarios where creativity, communication, and strategic thinking were tested in real time. Partnering with Street Origins (Fragrance World), the event featured the brand's own Brand Manager as judge, giving participants a genuine taste of industry-level evaluation. Teams battled through three high-impact rounds; Brand Recall, a 90-Second Skit, and an Investor Pitch, each designed to sharpen a different skill, from spontaneous thinking to structured persuasion. Team Velocity took home the win and the AED 300 prize, with participation certificates awarded across the board.</p>
+                                </div>
+                            </div>
+                            <h4 class="event-title">The Marketing Challenge</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                        <article class="event-card event-card--previous reveal" data-tilt>
+                            <button class="event-info-toggle" type="button" aria-expanded="false" aria-label="Toggle event description">
+                                <span aria-hidden="true">+</span>
+                            </button>
+                            <div class="event-media">
+                                <!-- Add image here. Image path: assets/events/recent-3.jpg, alt text: Bizz Quiz -->
+                                <div class="event-placeholder">
+                                    <span class="event-placeholder-icon">◇</span>
+                                    <span>Event Image</span>
+                                </div>
+                                <div class="event-overlay">
+                                    <p class="event-description">Bizz Quiz returned for its second edition, organized by AEP's newly elected council with an upgraded question bank and a sharper competition format. Building on the flagship quiz's foundation, this edition brought fresh, current business questions and refined judging criteria to raise the bar even further. The competition closed out with a high-stakes buzzer round and a hard-fought battle for the overall title, with cash prizes up for grabs for both, ending the season on a high-energy note!</p>
+                                </div>
+                            </div>
+                            <h4 class="event-title">Bizz Quiz</h4>
+                            <div class="event-glow"></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section team" id="team">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">The People</span>
+                    <h2 class="section-title dual-heading">
+                        <span>Our</span>
+                        <span class="gold">Team</span>
+                    </h2>
+                    <div class="section-flourish" aria-hidden="true"></div>
+                </div>
+
+                <!-- Mentors -->
+                <div class="team-block reveal">
+                    <h3 class="team-subtitle">
+                        <span class="team-subtitle-line"></span>
+                        Faculty Coordinators
+                        <span class="team-subtitle-line"></span>
+                    </h3>
+                    <div class="team-mentors-grid">
+                        <article class="team-card team-card--mentor reveal" data-tilt>
+                            <div class="team-photo-ring">
+                                <div class="team-photo">
+                                    <img src="assets/mentor-1.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">Dr. Sartaj Rather Rasool</h4>
+                            <p class="team-role">FIC</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card team-card--mentor reveal" data-tilt>
+                            <div class="team-photo-ring">
+                                <div class="team-photo">               
+                                    <img src="assets/mentor-2.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">Dr. Darshita Fulara Gunwant</h4>
+                            <p class="team-role">CO-FIC</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card team-card--mentor reveal" data-tilt>
+                            <div class="team-photo-ring">
+                                <div class="team-photo">
+                                    <img src="assets/mentor-3.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">Dr. Asgar Ali</h4>
+                            <p class="team-role">Mentor</p>
+                            <div class="team-glow"></div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Council -->
+                <div class="team-block team-block--council reveal">
+                    <h3 class="team-subtitle team-subtitle--council">
+                        <span class="team-subtitle-line"></span>
+                        Core Council
+                        <span class="team-subtitle-line"></span>
+                    </h3>
+                    <div class="team-grid">
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder">
+                                    <img src="assets/core.1.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">VARUN ABROL</h4>
+                            <p class="team-role">PRESIDENT</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder">
+                                    <img src="assets/core.2.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">SAHIL GUGLANI</h4>
+                            <p class="team-role">VICE PRESIDENT</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder">
+                                    <img src="assets/core.3.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">NIRALI SHARMA</h4>
+                            <p class="team-role">GENERAL SECRETARY</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder">
+                                    <img src="assets/core.4.png">
+                                </div>
+                            </div>
+                            <h4 class="team-name">KAVYA SHAH</h4>
+                            <p class="team-role">TREASURER</p>
+                            <div class="team-glow"></div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Department Heads -->
+                <div class="team-block team-block--department-heads reveal">
+                    <h3 class="team-subtitle team-subtitle--council">
+                        <span class="team-subtitle-line"></span>
+                        Department Heads
+                        <span class="team-subtitle-line"></span>
+                    </h3>
+                    <div class="team-grid">
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/core.6.png"></div>
+                            </div>
+                            <h4 class="team-name">Harsh DHANKAR</h4>
+                            <p class="team-role">CONTENT HEAD</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/core.7.png"></div>
+                            </div>
+                            <h4 class="team-name">KATLYN LINSEY</h4>
+                            <p class="team-role">CREATIVE HEAD</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/core.5.png"></div>
+                            </div>
+                            <h4 class="team-name">KOKKU SAI SRAVANT</h4>
+                            <p class="team-role">MARKETING HEAD</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.6.png"></div>
+                            </div>
+                            <h4 class="team-name">ANGAD SINGH</h4>
+                            <p class="team-role">OPERATIONS HEAD</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.3.png"></div>
+                            </div>
+                            <h4 class="team-name">SHASWAT PATHAK</h4>
+                            <p class="team-role">TECHNICAL Head</p>
+                            <div class="team-glow"></div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Executives -->
+                <div class="team-block team-block--executives reveal">
+                    <h3 class="team-subtitle team-subtitle--council">
+                        <span class="team-subtitle-line"></span>
+                        Executives
+                        <span class="team-subtitle-line"></span>
+                    </h3>
+                    <div class="team-grid">
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.1.png"></div>
+                            </div>
+                            <h4 class="team-name">PRANEETA ROSHAN</h4>
+                            <p class="team-role">CONTENT EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.2.png"></div>
+                            </div>
+                            <h4 class="team-name">HARSH VARDHAN</h4>
+                            <p class="team-role">CREATIVE EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.7.png"></div>
+                            </div>
+                            <h4 class="team-name">AKSHIT VARSHNEY</h4>
+                            <p class="team-role">OPERATIONS EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.8.png"></div>
+                            </div>
+                            <h4 class="team-name">DEVESH DHIR</h4>
+                            <p class="team-role">OPERATIONS EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.9.png"></div>
+                            </div>
+                            <h4 class="team-name">MEERA ARORA</h4>
+                            <p class="team-role">OUTREACH EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.4.png"></div>
+                            </div>
+                            <h4 class="team-name">VISHWAJEET JAWALKAR</h4>
+                            <p class="team-role">TECHNICAL EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                        <article class="team-card reveal" data-tilt>
+                            <div class="team-photo team-photo--member">
+                                <div class="team-photo-placeholder"><img src="assets/ex.5.png"></div>
+                            </div>
+                            <h4 class="team-name">KAVYANSH TALWAR</h4>
+                            <p class="team-role">TECHNICAL EXECUTIVE</p>
+                            <div class="team-glow"></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title dual-heading">
+                        <span>Contact</span>
+                        <span class="gold">AEP</span>
+                    </h2>
+                    <div class="section-flourish" aria-hidden="true"></div>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="contact-glow"></div>
+                    <div class="contact-icon" aria-hidden="true">✉</div>
+                    <p class="contact-label">Reach us at</p>
+                    <a href="mailto:aep@dubai.bits-pilani.ac.in" class="contact-email">aep@dubai.bits-pilani.ac.in</a>
+                    <p class="contact-note">Questions about joining, events, or collaborations — we'd love to hear from you.</p>
+                    <a href="mailto:aep@dubai.bits-pilani.ac.in" class="btn btn-outline btn-magnetic contact-btn">
+                        <span class="btn-bg"></span>
+                        <span class="btn-text">Send an Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join CTA -->
+        <section class="section join" id="join">
+            <div class="join-bg" aria-hidden="true">
+                <div class="join-ring join-ring--1"></div>
+                <div class="join-ring join-ring--2"></div>
+                <div class="join-ring join-ring--3"></div>
+            </div>
+            <div class="container">
+                <div class="join-content reveal">
+                    <div class="join-laurel join-laurel--left" aria-hidden="true"></div>
+                    <div class="join-inner">
+                        <span class="section-tag">Ready?</span>
+                        <h2 class="join-title">Your Name Belongs Here</h2>
+                        <p class="join-desc">Take the first step toward leadership, mentorship, and a credential that opens doors. No experience required — just enthusiasm and the willingness to show up.</p>
+                        <a href="mailto:aep@dubai.bits-pilani.ac.in" class="btn btn-primary btn-lg btn-magnetic btn-popup">
+                            <span class="btn-bg"></span>
+                            <span class="btn-text">Apply to Join AEP</span>
+                            <span class="btn-icon">→</span>
+                        </a>
+                        <p class="join-note">Applications open for the upcoming term</p>
+                    </div>
+                    <div class="join-laurel join-laurel--right" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/aep-logo.jpeg" alt="AEP — Association of Emerging Professionals" class="footer-logo-img">
+                    <div class="footer-full">Association of Emerging Professionals</div>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#events">Events</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#join">Join</a>
+                </nav>
+            </div>
+            <div class="footer-divider" aria-hidden="true"></div>
+            <p class="footer-copy">&copy; 2026 Association of Emerging Professionals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
