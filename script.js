@@ -1,5 +1,3 @@
-
-
 (function () {
     'use strict';
 
@@ -228,6 +226,34 @@
             });
         });
     }
+
+
+    // Previous Events - accessible tap/click toggle for the description overlay.
+    // Desktop hover is handled entirely in CSS; this covers touch devices and
+    // keyboard users, and never touches the `transform` property so it can't
+    // conflict with the tilt/magnetic listeners above.
+    const eventInfoToggles = document.querySelectorAll('.event-info-toggle');
+
+    eventInfoToggles.forEach((toggle) => {
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const card = toggle.closest('.event-card--previous');
+            if (!card) return;
+
+            const isActive = card.classList.toggle('is-active');
+            toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.event-card--previous.is-active').forEach((card) => {
+            if (!card.contains(e.target)) {
+                card.classList.remove('is-active');
+                const toggle = card.querySelector('.event-info-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 
    
     const aboutCards = document.querySelectorAll('.about-card');
