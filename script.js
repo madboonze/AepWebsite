@@ -143,25 +143,59 @@
     const sections = document.querySelectorAll('section[id]');
     const navLinkEls = document.querySelectorAll('.nav-link');
 
-    function updateActiveNav() {
-        const scrollPos = window.scrollY + 100;
-
-        sections.forEach((section) => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-
-            if (scrollPos >= top && scrollPos < top + height) {
-                navLinkEls.forEach((link) => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + id) {
-                        link.classList.add('active');
-                    }
-                });
-            }
+    function setActiveNav(id) {
+        navLinkEls.forEach((link) => {
+            const isActive = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isActive);
         });
     }
 
+    function updateActiveNav() {
+        const teamSection = document.getElementById('team');
+        const contactSection = document.getElementById('contact');
+        const viewportMid = window.innerHeight * 0.45;
+
+        if (teamSection && contactSection) {
+            const teamRect = teamSection.getBoundingClientRect();
+            const contactRect = contactSection.getBoundingClientRect();
+
+            const teamVisible = teamRect.top <= viewportMid && teamRect.bottom >= 0;
+            const contactVisible = contactRect.top <= viewportMid && contactRect.bottom >= 0;
+
+            if (teamVisible && !contactVisible) {
+                const teamStart = teamRect.top;
+                const teamEnd = teamRect.bottom;
+                const withinTeam = teamStart <= viewportMid && teamEnd >= viewportMid;
+
+                if (withinTeam) {
+                    setActiveNav('team');
+                    return;
+                }
+            }
+
+            if (contactVisible) {
+                setActiveNav('contact');
+                return;
+            }
+        }
+
+        let activeId = 'about';
+        let smallestGap = Number.POSITIVE_INFINITY;
+
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const gap = Math.abs(rect.top - 120);
+
+            if (gap < smallestGap) {
+                smallestGap = gap;
+                activeId = section.getAttribute('id');
+            }
+        });
+
+        setActiveNav(activeId);
+    }
+
+    updateActiveNav();
     window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 
@@ -253,6 +287,32 @@
                 if (toggle) toggle.setAttribute('aria-expanded', 'false');
             }
         });
+    });
+
+    const flipEventCards = document.querySelectorAll('.event-card--flip');
+
+    flipEventCards.forEach((card) => {
+        let flipTimer;
+
+        const triggerFlip = () => {
+            flipTimer = setTimeout(() => {
+                card.classList.add('is-flipped');
+                const toggle = card.querySelector('.event-info-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'true');
+            }, 1000);
+        };
+
+        const cancelFlip = () => {
+            clearTimeout(flipTimer);
+            card.classList.remove('is-flipped');
+            const toggle = card.querySelector('.event-info-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        card.addEventListener('mouseenter', triggerFlip);
+        card.addEventListener('mouseleave', cancelFlip);
+        card.addEventListener('focusin', triggerFlip);
+        card.addEventListener('focusout', cancelFlip);
     });
 
    
