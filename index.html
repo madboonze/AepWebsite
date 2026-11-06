@@ -7,7 +7,8 @@
     <title>AEP | Association of Emerging Professionals</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,12 +23,6 @@
             <p class="preloader-text">ASSOCIATION OF EMERGING PROFESSIONALS</p>
         </div>
     </div>
-
-    <!-- Cursor glow -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-
-    <!-- Geometric background canvas -->
-    <canvas id="geoCanvas" class="geo-canvas" aria-hidden="true"></canvas>
 
     <!-- Navigation -->
     <header class="navbar" id="navbar">
@@ -44,6 +39,7 @@
                 <a href="#events" class="nav-link">Events</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="latest-event.html" class="nav-link nav-link--event">Latest Event</a>
                 <a href="#join" class="nav-link nav-cta">Join AEP</a>
             </nav>
             <div class="nav-brand-markers" aria-label="Institution logos">
@@ -56,6 +52,17 @@
 
         <!-- Hero -->
         <section class="hero" id="hero">
+            <svg class="hero-lapel" viewBox="0 0 1080 760" aria-hidden="true" focusable="false">
+                <defs>
+                    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#E9CF86"/>
+                        <stop offset="0.55" stop-color="#C9A24B"/>
+                        <stop offset="1" stop-color="#8F6F2A"/>
+                    </linearGradient>
+                </defs>
+                <path class="lapel-line lapel-line--outer" pathLength="1" d="M350 112 L250 245 L550 640 L852 245 L752 112 L705 170 L765 240 L550 520 L338 240 L398 170 Z"/>
+                <path class="lapel-line lapel-line--tie" pathLength="1" d="M490 112 L612 112 L580 190 L598 335 L550 390 L505 335 L520 190 Z"/>
+            </svg>
             <div class="hero-content">
                 <div class="hero-badge reveal">
                     Association of Emerging Professionals
@@ -120,6 +127,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
         <!-- Benefits -->
         <section class="section benefits" id="benefits">
@@ -265,7 +274,7 @@
                             </button>
                             <div class="event-media event-media--flip">
                                 <div class="event-face event-face--front">
-                                    <img src="assets/cv_masterclass.png" alt="CV Masterclass - From Campus to Corporate">
+                                    <img src="assets/cv_masterclass.png" alt="CV Masterclass - From Campus to Corporate" loading="lazy">
                                 </div>
                                 <div class="event-face event-face--back">
                                     <p class="event-description">CV Masterclass - From Campus to Corporate was a hands-on career-readiness workshop built to help students bridge the gap between university and the professional world. The session covered what actually matters in today's job market; from crafting a resume that stands out, to decoding how corporate recruitment really works. Participants also walked through interview preparation techniques and strategies for adapting to a professional environment, leaving with practical, actionable tools for their next career move.</p>
@@ -280,7 +289,7 @@
                             </button>
                             <div class="event-media event-media--flip">
                                 <div class="event-face event-face--front">
-                                    <img src="assets/marketing.png" alt="The Marketing Challenge">
+                                    <img src="assets/marketing.png" alt="The Marketing Challenge" loading="lazy">
                                 </div>
                                 <div class="event-face event-face--back">
                                     <p class="event-description">The Marketing Challenge 2026 brought theory to life, pushing students into live marketing scenarios where creativity, communication, and strategic thinking were tested in real time. Partnering with Street Origins (Fragrance World), the event featured the brand's own Brand Manager as judge, giving participants a genuine taste of industry-level evaluation. Teams battled through three high-impact rounds; Brand Recall, a 90-Second Skit, and an Investor Pitch, each designed to sharpen a different skill, from spontaneous thinking to structured persuasion. Team Velocity took home the win and the AED 300 prize, with participation certificates awarded across the board.</p>
@@ -295,7 +304,7 @@
                             </button>
                             <div class="event-media event-media--flip">
                                 <div class="event-face event-face--front">
-                                    <img src="assets/biz_quiz.jpeg" alt="Bizz Quiz">
+                                    <img src="assets/biz_quiz.jpeg" alt="Bizz Quiz" loading="lazy">
                                 </div>
                                 <div class="event-face event-face--back">
                                     <p class="event-description">Bizz Quiz returned for its second edition, organized by AEP's newly elected council with an upgraded question bank and a sharper competition format. Building on the flagship quiz's foundation, this edition brought fresh, current business questions and refined judging criteria to raise the bar even further. The competition closed out with a high-stakes buzzer round and a hard-fought battle for the overall title, with cash prizes up for grabs for both, ending the season on a high-energy note!</p>
@@ -332,7 +341,7 @@
                         <article class="team-card team-card--mentor reveal" data-tilt>
                             <div class="team-photo-ring">
                                 <div class="team-photo">
-                                    <img src="assets/mentor-1.png">
+                                    <img src="assets/mentor-1.png" alt="Dr. Sartaj Rather Rasool" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">Dr. Sartaj Rather Rasool</h4>
@@ -342,7 +351,7 @@
                         <article class="team-card team-card--mentor reveal" data-tilt>
                             <div class="team-photo-ring">
                                 <div class="team-photo">               
-                                    <img src="assets/mentor-2.png">
+                                    <img src="assets/mentor-2.png" alt="Dr. Darshita Fulara Gunwant" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">Dr. Darshita Fulara Gunwant</h4>
@@ -352,7 +361,7 @@
                         <article class="team-card team-card--mentor reveal" data-tilt>
                             <div class="team-photo-ring">
                                 <div class="team-photo">
-                                    <img src="assets/mentor-3.png">
+                                    <img src="assets/mentor-3.png" alt="Dr. Asgar Ali" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">Dr. Asgar Ali</h4>
@@ -373,7 +382,7 @@
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
                                 <div class="team-photo-placeholder">
-                                    <img src="assets/core.1.png">
+                                    <img src="assets/core.1.png" alt="VARUN ABROL" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">VARUN ABROL</h4>
@@ -383,7 +392,7 @@
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
                                 <div class="team-photo-placeholder">
-                                    <img src="assets/core.2.png">
+                                    <img src="assets/core.2.png" alt="SAHIL GUGLANI" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">SAHIL GUGLANI</h4>
@@ -393,7 +402,7 @@
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
                                 <div class="team-photo-placeholder">
-                                    <img src="assets/core.3.png">
+                                    <img src="assets/core.3.png" alt="NIRALI SHARMA" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">NIRALI SHARMA</h4>
@@ -403,7 +412,7 @@
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
                                 <div class="team-photo-placeholder">
-                                    <img src="assets/core.4.png">
+                                    <img src="assets/core.4.png" alt="KAVYA SHAH" loading="lazy">
                                 </div>
                             </div>
                             <h4 class="team-name">KAVYA SHAH</h4>
@@ -423,7 +432,7 @@
                     <div class="team-grid">
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/core.6.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/core.6.png" alt="Harsh DHANKAR" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">Harsh DHANKAR</h4>
                             <p class="team-role">CONTENT HEAD</p>
@@ -431,7 +440,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/core.7.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/core.7.png" alt="KATLYN LINSEY" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">KATLYN LINSEY</h4>
                             <p class="team-role">CREATIVE HEAD</p>
@@ -439,7 +448,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/core.5.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/core.5.png" alt="KOKKU SAI SRAVANT" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">KOKKU SAI SRAVANT</h4>
                             <p class="team-role">MARKETING HEAD</p>
@@ -447,7 +456,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.6.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.6.png" alt="ANGAD SINGH" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">ANGAD SINGH</h4>
                             <p class="team-role">OPERATIONS HEAD</p>
@@ -455,7 +464,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.3.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.3.png" alt="SHASWAT PATHAK" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">SHASWAT PATHAK</h4>
                             <p class="team-role">TECHNICAL Head</p>
@@ -474,7 +483,7 @@
                     <div class="team-grid">
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.1.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.1.png" alt="PRANEETA ROSHAN" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">PRANEETA ROSHAN</h4>
                             <p class="team-role">CONTENT EXECUTIVE</p>
@@ -482,7 +491,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.2.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.2.png" alt="HARSH VARDHAN" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">HARSH VARDHAN</h4>
                             <p class="team-role">CREATIVE EXECUTIVE</p>
@@ -490,7 +499,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.7.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.7.png" alt="AKSHIT VARSHNEY" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">AKSHIT VARSHNEY</h4>
                             <p class="team-role">OPERATIONS EXECUTIVE</p>
@@ -498,7 +507,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.8.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.8.png" alt="DEVESH DHIR" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">DEVESH DHIR</h4>
                             <p class="team-role">OPERATIONS EXECUTIVE</p>
@@ -506,7 +515,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.9.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.9.png" alt="MEERA ARORA" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">MEERA ARORA</h4>
                             <p class="team-role">OUTREACH EXECUTIVE</p>
@@ -514,7 +523,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.4.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.4.png" alt="VISHWAJEET JAWALKAR" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">VISHWAJEET JAWALKAR</h4>
                             <p class="team-role">TECHNICAL EXECUTIVE</p>
@@ -522,7 +531,7 @@
                         </article>
                         <article class="team-card reveal" data-tilt>
                             <div class="team-photo team-photo--member">
-                                <div class="team-photo-placeholder"><img src="assets/ex.5.png"></div>
+                                <div class="team-photo-placeholder"><img src="assets/ex.5.png" alt="KAVYANSH TALWAR" loading="lazy"></div>
                             </div>
                             <h4 class="team-name">KAVYANSH TALWAR</h4>
                             <p class="team-role">TECHNICAL EXECUTIVE</p>
@@ -600,6 +609,7 @@
                     <a href="#events">Events</a>
                     <a href="#team">Team</a>
                     <a href="#contact">Contact</a>
+                    <a href="latest-event.html">Latest Event</a>
                     <a href="#join">Join</a>
                 </nav>
             </div>
